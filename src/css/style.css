@@ -3,11 +3,22 @@ html, body {
     width: 100%;
     background-image: url("../images/nintendo.jpg");
     background-size: cover;
-    background-position: bottom;
     overflow: hidden;
     margin: 0;
     font-style: calibri;
-    transition: background-position ease-in-out 4s;
+    animation-name: background-move;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+@keyframes background-move {
+    0%{background-position: bottom;}
+    10% {background-position: bottom;}
+    50% {background-position: top;}
+    60% {background-position: top;}
+    100% {background-position: bottom;}
 }
 
 
